@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MarketX - Investment Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         BACKGROUND GLOW
+    ========================================== -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- =========================================
+         MAIN DASHBOARD
+    ========================================== -->
+
+    <div class="dashboard">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <div class="logo-symbol">
+                    M
+                </div>
+
+                <div class="logo-name">
+                    Market<span>X</span>
+                </div>
+
+            </div>
+
+
+            <!-- MAIN NAVIGATION -->
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-link active">
+
+                    <span class="nav-icon">◉</span>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <span class="nav-icon">▣</span>
+
+                    <span>Portfolio</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <span class="nav-icon">▥</span>
+
+                    <span>Analysis</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <span class="nav-icon">⌁</span>
+
+                    <span>Market</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <span class="nav-icon">♧</span>
+
+                    <span>Community</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+                <a href="#" class="nav-link">
+
+                    <span class="nav-icon">⚙</span>
+
+                    <span>Settings</span>
+
+                </a>
+
+
+                <a href="#" class="nav-link">
+
+                    <span class="nav-icon">?</span>
+
+                    <span>Support</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             CONTENT
+        ====================================== -->
+
+        <main class="content">
+
+
+            <!-- =================================
+                 HEADER
+            ================================== -->
+
+            <header class="header">
+
+                <div class="welcome">
+
+                    <h1>
+                        Welcome, <span>Investor</span>
+                    </h1>
+
+                    <p>
+                        Here's your investment portfolio overview
+                    </p>
+
+                </div>
+
+
+                <div class="header-right">
+
+
+                    <!-- NOTIFICATION -->
+
+                    <button class="circle-button">
+                        ♧
+                    </button>
+
+
+                    <!-- SETTINGS -->
+
+                    <button class="circle-button">
+                        ⚙
+                    </button>
+
+
+                    <!-- PROFILE -->
+
+                    <div class="profile">
+
+                        <div class="profile-image">
+                            K
+                        </div>
+
+                        <div class="profile-details">
+
+                            <strong>Market User</strong>
+
+                            <small>
+                                investor@marketx.com
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================
+                 TOP TABS
+            ================================== -->
+
+            <div class="top-section">
+
+                <div class="tabs">
+
+                    <button class="tab active">
+                        Market
+                    </button>
+
+                    <button class="tab">
+                        Wallet
+                    </button>
+
+                    <button class="tab">
+                        Tools
+                    </button>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="ai-search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Ask MarketX anything..."
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 TOP CARDS
+            ================================== -->
+
+            <section class="top-cards">
+
+
+                <!-- MARKET VALUE -->
+
+                <div class="glass-card holding-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span class="label">
+                                MARKET VALUE
+                            </span>
+
+                            <h2>
+                                ₹12,304.11
+                            </h2>
+
+                        </div>
+
+
+                        <select id="periodSelect">
+
+                            <option>6M</option>
+                            <option>1M</option>
+                            <option>1Y</option>
+                            <option>5Y</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mini-stat">
+
+                        <span class="positive">
+                            +₹421.32
+                        </span>
+
+                        <span class="positive">
+                            +3.52%
+                        </span>
+
+                        <small>
+                            today
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MARKET INSIGHTS -->
+
+                <div class="glass-card insight-card">
+
+                    <div class="insight-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <span class="label">
+                            MARKET INSIGHTS
+                        </span>
+
+                        <h3>
+                            Understand the market
+                        </h3>
+
+                        <p>
+                            Turn complex market data into simple,
+                            understandable insights.
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="insight-button"
+                        id="insightButton"
+                    >
+                        Explore Insights →
+                    </button>
+
+                </div>
+
+
+
+                <!-- WATCHLIST -->
+
+                <div class="glass-card watchlist-card">
+
+                    <div class="section-title">
+
+                        <h3>
+                            Watchlist
+                        </h3>
+
+                        <button>
+                            See all
+                        </button>
+
+                    </div>
+
+
+                    <div class="watchlist-tabs">
+
+                        <button class="watch-tab active">
+                            Most Viewed
+                        </button>
+
+                        <button class="watch-tab">
+                            Gain
+                        </button>
+
+                        <button class="watch-tab">
+                            Lose
+                        </button>
+
+                    </div>
+
+
+                    <!-- STOCK -->
+
+                    <div class="watch-stock">
+
+                        <div class="stock-name">
+
+                            <div class="stock-icon spotify">
+                                S
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    RELIANCE
+                                </strong>
+
+                                <small>
+                                    NSE · RELIANCE
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stock-value">
+
+                            <strong>
+                                ₹1,421.30
+                            </strong>
+
+                            <span class="positive">
+                                +1.42%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STOCK -->
+
+                    <div class="watch-stock">
+
+                        <div class="stock-name">
+
+                            <div class="stock-icon amazon">
+                                T
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    TCS
+                                </strong>
+
+                                <small>
+                                    NSE · TCS
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stock-value">
+
+                            <strong>
+                                ₹3,982.15
+                            </strong>
+
+                            <span class="positive">
+                                +0.64%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STOCK -->
+
+                    <div class="watch-stock">
+
+                        <div class="stock-name">
+
+                            <div class="stock-icon microsoft">
+                                M
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    HDFCBANK
+                                </strong>
+
+                                <small>
+                                    NSE · HDFCBANK
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stock-value">
+
+                            <strong>
+                                ₹1,006.70
+                            </strong>
+
+                            <span class="negative">
+                                -0.38%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STOCK -->
+
+                    <div class="watch-stock">
+
+                        <div class="stock-name">
+
+                            <div class="stock-icon nvidia">
+                                I
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    INFY
+                                </strong>
+
+                                <small>
+                                    NSE · INFY
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stock-value">
+
+                            <strong>
+                                ₹1,487.40
+                            </strong>
+
+                            <span class="positive">
+                                +1.12%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PORTFOLIO -->
+
+                <div class="glass-card portfolio-card">
+
+                    <div class="section-title">
+
+                        <h3>
+                            My Portfolio
+                        </h3>
+
+                        <button>
+                            See all ↗
+                        </button>
+
+                    </div>
+
+
+                    <div class="portfolio-grid">
+
+
+                        <div class="portfolio-item">
+
+                            <div class="portfolio-price">
+                                ₹1,721.3
+                            </div>
+
+                            <span class="positive">
+                                +12.31 (0.7%)
+                            </span>
+
+                            <div class="portfolio-bottom">
+
+                                <div class="company-icon apple">
+                                    R
+                                </div>
+
+                                <small>
+                                    RELIANCE
+                                </small>
+
+                                <small>
+                                    Units 104
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="portfolio-item">
+
+                            <div class="portfolio-price">
+                                ₹1,721.3
+                            </div>
+
+                            <span class="positive">
+                                +12.31 (0.7%)
+                            </span>
+
+                            <div class="portfolio-bottom">
+
+                                <div class="company-icon amazon">
+                                    T
+                                </div>
+
+                                <small>
+                                    TCS
+                                </small>
+
+                                <small>
+                                    Units 12
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="portfolio-item">
+
+                            <div class="portfolio-price">
+                                ₹1,721.3
+                            </div>
+
+                            <span class="positive">
+                                +12.31 (0.7%)
+                            </span>
+
+                            <div class="portfolio-bottom">
+
+                                <div class="company-icon microsoft">
+                                    M
+                                </div>
+
+                                <small>
+                                    INFY
+                                </small>
+
+                                <small>
+                                    Units 41
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="portfolio-item">
+
+                            <div class="portfolio-price">
+                                ₹1,721.3
+                            </div>
+
+                            <span class="positive">
+                                +12.31 (0.7%)
+                            </span>
+
+                            <div class="portfolio-bottom">
+
+                                <div class="company-icon nvidia">
+                                    H
+                                </div>
+
+                                <small>
+                                    HDFC
+                                </small>
+
+                                <small>
+                                    Units 16
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PERFORMANCE CHART
+            ================================== -->
+
+            <section class="glass-card performance-card">
+
+                <div class="performance-header">
+
+                    <div>
+
+                        <span class="label">
+                            MARKET PERFORMANCE
+                        </span>
+
+                        <h2>
+                            Portfolio Performance
+                        </h2>
+
+                    </div>
+
+
+                    <div class="chart-buttons">
+
+                        <button>
+                            1D
+                        </button>
+
+                        <button>
+                            1W
+                        </button>
+
+                        <button class="active">
+                            1M
+                        </button>
+
+                        <button>
+                            6M
+                        </button>
+
+                        <button>
+                            1Y
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHART -->
+
+                <div class="chart-container">
+
+                    <div class="chart-y-axis">
+
+                        <span>₹200k</span>
+                        <span>₹150k</span>
+                        <span>₹100k</span>
+                        <span>₹50k</span>
+                        <span>₹10k</span>
+
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <div class="horizontal-line line-1"></div>
+                        <div class="horizontal-line line-2"></div>
+                        <div class="horizontal-line line-3"></div>
+                        <div class="horizontal-line line-4"></div>
+                        <div class="horizontal-line line-5"></div>
+
+
+                        <svg
+                            viewBox="0 0 1000 350"
+                            preserveAspectRatio="none"
+                            class="performance-svg"
+                        >
+
+                            <defs>
+
+                                <linearGradient
+                                    id="areaGradient"
+                                    x1="0"
+                                    y1="0"
+                                    x2="0"
+                                    y2="1"
+                                >
+
+                                    <stop
+                                        offset="0%"
+                                        stop-opacity="0.35"
+                                    />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-opacity="0"
+                                    />
+
+                                </linearGradient>
+
+                            </defs>
+
+
+                            <path
+                                class="chart-fill"
+                                d="
+                                M0 220
+                                C30 200 50 215 80 190
+                                C110 170 130 200 160 180
+                                C190 160 220 175 250 145
+                                C280 125 300 170 330 145
+                                C360 125 390 130 420 150
+                                C450 175 470 120 500 110
+                                C530 100 550 130 580 105
+                                C610 80 640 120 670 100
+                                C700 80 730 90 760 120
+                                C790 150 820 110 850 145
+                                C880 170 900 145 930 165
+                                C960 180 980 175 1000 190
+                                L1000 350
+                                L0 350
+                                Z
+                                "
+                            />
+
+
+                            <path
+                                class="chart-line"
+                                d="
+                                M0 220
+                                C30 200 50 215 80 190
+                                C110 170 130 200 160 180
+                                C190 160 220 175 250 145
+                                C280 125 300 170 330 145
+                                C360 125 390 130 420 150
+                                C450 175 470 120 500 110
+                                C530 100 550 130 580 105
+                                C610 80 640 120 670 100
+                                C700 80 730 90 760 120
+                                C790 150 820 110 850 145
+                                C880 170 900 145 930 165
+                                C960 180 980 175 1000 190
+                                "
+                            />
+
+                        </svg>
+
+
+                        <!-- TOOLTIP -->
+
+                        <div class="chart-tooltip">
+
+                            <small>
+                                18 Sep 2026
+                            </small>
+
+                            <strong>
+                                ₹16,500
+                            </strong>
+
+                            <span class="positive">
+                                +3.5%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MONTHS -->
+
+                <div class="chart-months">
+
+                    <span>Jan</span>
+                    <span>Feb</span>
+                    <span>Mar</span>
+                    <span>Apr</span>
+                    <span>May</span>
+                    <span>Jun</span>
+                    <span>Jul</span>
+                    <span>Aug</span>
+                    <span>Sep</span>
+                    <span>Oct</span>
+                    <span>Nov</span>
+                    <span>Dec</span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 ANALYSIS SECTION
+            ================================== -->
+
+            <section class="bottom-grid">
+
+
+                <!-- FUNDAMENTALS -->
+
+                <div class="glass-card analysis-card">
+
+                    <div class="section-title">
+
+                        <div>
+
+                            <span class="label">
+                                FUNDAMENTAL ANALYSIS
+                            </span>
+
+                            <h3>
+                                Reliance Industries
+                            </h3>
+
+                        </div>
+
+                        <span class="pill">
+                            Long Term
+                        </span>
+
+                    </div>
+
+
+                    <div class="fundamental-grid">
+
+                        <div>
+                            <span>P/E Ratio</span>
+                            <strong>24.31</strong>
+                        </div>
+
+                        <div>
+                            <span>EPS</span>
+                            <strong>₹58.47</strong>
+                        </div>
+
+                        <div>
+                            <span>ROE</span>
+                            <strong>9.84%</strong>
+                        </div>
+
+                        <div>
+                            <span>Debt / Equity</span>
+                            <strong>0.41</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TECHNICAL -->
+
+                <div class="glass-card analysis-card">
+
+                    <div class="section-title">
+
+                        <div>
+
+                            <span class="label">
+                                TECHNICAL ANALYSIS
+                            </span>
+
+                            <h3>
+                                Market Signals
+                            </h3>
+
+                        </div>
+
+                        <span class="pill purple">
+                            Short Term
+                        </span>
+
+                    </div>
+
+
+                    <div class="technical-list">
+
+                        <div>
+
+                            <span>RSI (14)</span>
+
+                            <strong>
+                                61.42
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>50 Day MA</span>
+
+                            <strong>
+                                ₹1,382
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>MACD</span>
+
+                            <strong class="positive">
+                                +18.42
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FOOTER -->
+
+            <footer>
+
+                <p>
+                    MarketX © 2026 · Educational Stock Market Dashboard
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

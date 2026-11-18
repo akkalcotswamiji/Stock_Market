@@ -367,11 +367,12 @@
 
                         <div class="chart-buttons">
 
-                            <button class="active" type="button">1D</button>
-                            <button type="button">1W</button>
-                            <button type="button">1M</button>
-                            <button type="button">6M</button>
-                            <button type="button">1Y</button>
+                            <div class="chart-buttons">
+                                 <button class="active" data-period="1D" type="button">1D</button>
+                                 <button data-period="1W" type="button">1W</button>
+                                 <button data-period="1M" type="button">1M</button>
+                                 <button data-period="1Y" type="button">1Y</button>
+                            </div>
 
                         </div>
 
@@ -410,7 +411,9 @@
                                 </defs>
 
                                 <path
-                                    class="chart-fill"
+                                    <path
+                                      id="chartFill"
+                                      class="chart-fill"
                                     d="M0,190
                                     C50,170 70,185 110,150
                                     S180,130 220,145
@@ -424,7 +427,9 @@
                                 />
 
                                 <path
-                                    class="chart-line"
+                                    <path
+                                         id="chartLine"
+                                         class="chart-line"
                                     d="M0,190
                                     C50,170 70,185 110,150
                                     S180,130 220,145

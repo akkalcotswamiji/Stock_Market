@@ -1621,3 +1621,401 @@ footer {
     }
 
 }
+
+/* =========================================
+   MARKETX ADDITIONAL PAGE STYLES
+========================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    white-space: nowrap;
+}
+
+.table-wrapper th {
+    font-size: 12px;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.table-wrapper td {
+    font-size: 14px;
+}
+
+.content ol,
+.content ul {
+    padding-left: 24px;
+    line-height: 2;
+}
+
+.content h3 {
+    margin-top: 20px;
+}
+
+.content .glass-card {
+    margin-bottom: 20px;
+}
+
+.content .glass-card p {
+    line-height: 1.7;
+}
+
+.content a {
+    text-decoration: none;
+}
+
+/* =====================================
+   MARKETX — PREMIUM PURPLE THEME
+   ===================================== */
+
+:root {
+    --bg: #09070f;
+    --sidebar: #100b19;
+    --card: #171020;
+    --card-hover: #20152e;
+    --purple: #803df0;
+    --purple-light: #a879f5;
+    --lavender: #d8c5ff;
+    --text: #f5f0ff;
+    --muted: #9990a8;
+    --border: rgba(168, 121, 245, 0.16);
+    --green: #35cf91;
+    --red: #ff657a;
+}
+
+/* GLOBAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 75% 0%, rgba(105, 44, 180, 0.13), transparent 40%),
+        var(--bg) !important;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+/* MAIN DASHBOARD */
+
+.dashboard {
+    background: transparent !important;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    background: var(--sidebar) !important;
+    border-right: 1px solid var(--border);
+    padding: 25px 18px !important;
+}
+
+.logo {
+    color: var(--text) !important;
+    font-size: 25px !important;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--purple-light);
+}
+
+.navigation {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.nav-link {
+    color: var(--muted) !important;
+    border-radius: 12px;
+    padding: 13px 15px !important;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white !important;
+    background: linear-gradient(
+        100deg,
+        rgba(128, 61, 240, 0.28),
+        rgba(128, 61, 240, 0.07)
+    ) !important;
+    border: 1px solid rgba(168, 121, 245, 0.25);
+    box-shadow: 0 0 18px rgba(128, 61, 240, 0.12);
+}
+
+/* MAIN CONTENT */
+
+.content {
+    background: transparent !important;
+    padding: 35px !important;
+}
+
+.header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.welcome h1,
+.welcome h2,
+.content h1,
+.content h2 {
+    color: var(--text) !important;
+    letter-spacing: -0.7px;
+}
+
+.content p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* CARDS */
+
+.glass-card,
+.analysis-card,
+.top-cards > div,
+.bottom-grid > div {
+    background: linear-gradient(
+        145deg,
+        rgba(34, 22, 49, 0.95),
+        rgba(19, 13, 29, 0.97)
+    ) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.glass-card:hover,
+.analysis-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(168, 121, 245, 0.45) !important;
+}
+
+/* CARD HEADINGS */
+
+.label,
+.section-title {
+    color: var(--lavender) !important;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.glass-card h2,
+.glass-card h3,
+.analysis-card h2,
+.analysis-card h3 {
+    color: var(--text) !important;
+}
+
+/* BUTTONS */
+
+button,
+.insight-button {
+    background: linear-gradient(
+        135deg,
+        #7132d7,
+        #9b5cf5
+    ) !important;
+    color: white !important;
+    border: 1px solid rgba(216, 197, 255, 0.2) !important;
+    border-radius: 10px !important;
+    padding: 10px 17px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button:hover,
+.insight-button:hover {
+    box-shadow: 0 0 22px rgba(128, 61, 240, 0.4);
+    transform: translateY(-2px);
+}
+
+/* TABS */
+
+.tab,
+.watch-tab {
+    color: var(--muted);
+    border-radius: 9px;
+    transition: 0.2s ease;
+}
+
+.tab.active,
+.watch-tab.active {
+    background: rgba(128, 61, 240, 0.2);
+    color: var(--lavender);
+}
+
+/* STOCK MOVEMENTS */
+
+.positive {
+    color: var(--green) !important;
+}
+
+.negative {
+    color: var(--red) !important;
+}
+
+/* TABLES */
+
+.table-wrapper {
+    background: transparent;
+    overflow-x: auto;
+    border-radius: 14px;
+}
+
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-wrapper th {
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px;
+}
+
+.table-wrapper td {
+    color: var(--text);
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.table-wrapper tr:hover td {
+    background: rgba(128, 61, 240, 0.07);
+}
+
+/* INPUTS */
+
+input,
+select,
+textarea {
+    background: #100b19 !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    padding: 11px 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--purple-light) !important;
+    box-shadow: 0 0 12px rgba(128, 61, 240, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--muted);
+}
+
+/* PILLS */
+
+.pill {
+    background: rgba(128, 61, 240, 0.17);
+    color: var(--lavender);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 11px;
+}
+
+/* LINKS */
+
+.content a {
+    color: var(--purple-light);
+    transition: color 0.2s ease;
+}
+
+.content a:hover {
+    color: var(--lavender);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #543080;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .content {
+        padding: 20px !important;
+    }
+
+    .top-cards,
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 14px !important;
+    }
+
+    .sidebar {
+        padding: 15px !important;
+    }
+
+    .glass-card {
+        padding: 17px !important;
+    }
+}
+
+/* MARKETX TYPOGRAPHY */
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.8px;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.label {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}

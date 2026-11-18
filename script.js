@@ -602,3 +602,141 @@ if (marketPeriod) {
     updateMarket(marketPeriod.value);
 
 }
+
+/* =========================================
+   PERFORMANCE GRAPH — PERIOD UPDATES
+========================================= */
+
+const chartLine = document.getElementById("chartLine");
+const chartFill = document.getElementById("chartFill");
+
+const chartPeriodButtons = document.querySelectorAll(
+    ".chart-buttons button"
+);
+
+const periodDropdown = document.getElementById("periodSelect");
+
+const chartData = {
+    "1D": {
+        values: [11200, 11500, 11350, 11800, 11600, 12000, 12100, 12304.11],
+        change: 2.45
+    },
+
+    "1W": {
+        values: [10800, 11100, 11000, 11600, 11800, 11500, 12200, 12680.50],
+        change: 3.12
+    },
+
+    "1M": {
+        values: [10500, 10800, 10700, 11400, 11800, 11600, 12500, 13120.75],
+        change: 5.36
+    },
+
+    "1Y": {
+        values: [8500, 9200, 8800, 10200, 11000, 12500, 13700, 14850.25],
+        change: 12.80
+    }
+};
+
+function updatePerformanceGraph(period) {
+
+    const data = chartData[period];
+
+    if (!data || !chartLine || !chartFill) return;
+
+    // Convert values into SVG coordinates
+    const points = data.values.map(function(value, index) {
+
+        const x = index * (800 / (data.values.length - 1));
+        const y = 250 - (value / 16000) * 230;
+
+        return {
+            x: x,
+            y: y
+        };
+
+    });
+
+    // Create the line
+    let linePath = "M " + points[0].x + " " + points[0].y;
+
+    for (let i = 1; i < points.length; i++) {
+        linePath += " L " + points[i].x + " " + points[i].y;
+    }
+
+    // Create the shaded area
+    const fillPath =
+        linePath +
+        " L 800 250 L 0 250 Z";
+
+    chartLine.setAttribute("d", linePath);
+    chartFill.setAttribute("d", fillPath);
+
+    // Update the chart tooltip
+    const tooltip = document.querySelector(".chart-tooltip");
+
+    if (tooltip) {
+
+        const valueElement = tooltip.querySelector("strong");
+        const changeElement = tooltip.querySelector("span");
+
+        if (valueElement) {
+            valueElement.textContent =
+                "₹" + data.values[data.values.length - 1].toLocaleString("en-IN", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+        }
+
+        if (changeElement) {
+            changeElement.textContent =
+                (data.change >= 0 ? "+" : "") +
+                data.change.toFixed(2) + "%";
+        }
+
+    }
+
+    // Update market value using the existing function
+    if (typeof updateMarket === "function") {
+        updateMarket(period);
+    }
+
+    // Synchronize the dropdown
+    if (periodDropdown) {
+        periodDropdown.value = period;
+    }
+
+    // Highlight selected chart button
+    chartPeriodButtons.forEach(function(button) {
+
+        button.classList.toggle(
+            "active",
+            button.dataset.period === period
+        );
+
+    });
+
+}
+
+// Chart button clicks
+chartPeriodButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+        updatePerformanceGraph(button.dataset.period);
+    });
+
+});
+
+// Dropdown changes
+if (periodDropdown) {
+
+    periodDropdown.addEventListener("change", function() {
+        updatePerformanceGraph(periodDropdown.value);
+    });
+
+}
+
+// Initial graph
+updatePerformanceGraph(
+    periodDropdown ? periodDropdown.value : "1D"
+);

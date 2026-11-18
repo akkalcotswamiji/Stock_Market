@@ -545,3 +545,60 @@ window.addEventListener("load", function() {
     }
 
 });
+
+/* =========================================
+   MARKET VALUE — PERIOD SELECTOR
+   Illustrative demo values, not live prices
+========================================= */
+
+const marketValue = document.getElementById("marketValue");
+const marketChange = document.getElementById("marketChange");
+const marketPeriod = document.getElementById("periodSelect");
+
+const marketData = {
+    "1D": {
+        value: 12304.11,
+        change: 2.45
+    },
+    "1W": {
+        value: 12680.50,
+        change: 3.12
+    },
+    "1M": {
+        value: 13120.75,
+        change: 5.36
+    },
+    "1Y": {
+        value: 14850.25,
+        change: 12.80
+    }
+};
+
+function updateMarket(period) {
+
+    const data = marketData[period];
+
+    if (!data || !marketValue || !marketChange) return;
+
+    marketValue.textContent = "₹" + data.value.toLocaleString("en-IN", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+
+    const arrow = data.change >= 0 ? "↗ " : "↘ ";
+
+    marketChange.textContent = arrow + Math.abs(data.change).toFixed(2) + "%";
+
+    marketChange.classList.toggle("positive", data.change >= 0);
+    marketChange.classList.toggle("negative", data.change < 0);
+}
+
+if (marketPeriod) {
+
+    marketPeriod.addEventListener("change", function() {
+        updateMarket(marketPeriod.value);
+    });
+
+    updateMarket(marketPeriod.value);
+
+}
